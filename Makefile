@@ -27,11 +27,11 @@ SRCS           =
 SUB_DIRS	      = third_party/llvm-diff
 
 # 2: list of compile options (e.g., -Ddefine, -Iinc, ...)
-LOCAL_CXXFLAGS = -I/usr/lib/llvm-11/include -std=c++17
+LOCAL_CXXFLAGS = -I/usr/lib/llvm-12/include -std=c++17
 LOCAL_CFLAGS   =
 
 # 3: list of link options (e.g., -lm, -Labc, ...)
-LOCAL_LIB      = -L/usr/lib/llvm-11/lib -Lthird_party/llvm-diff -lllvm-diff -lLLVM -lelf
+LOCAL_LIB      = -L/usr/lib/llvm-12/lib -Lthird_party/llvm-diff -lllvm-diff -lLLVM -lelf
 
 # 4: name for a.out or library
 #    - specify LIB_NAME if you want to create libLIB_NAME.so out of your SRCS
@@ -43,7 +43,7 @@ EXE            = livepatch
 # 5: specify compiler
 #    - if not specified, CC = gcc, CXX= g++
 CC             =
-CXX            = clang++
+CXX            = clang++-12
 
 # 6: specify path to dir w/ Makefile.rules and Makefile.macros in it
 PRJ_ROOT_DIR  ?= .
